@@ -40,9 +40,7 @@ Una vez que Jenkins esté en ejecución, necesitarás una clave para acceder a l
 
 Reemplaza `<nombre_del_contenedor_jenkins>` con el nombre de tu contenedor de Jenkins. Para obtener el nombre exacto del contenedor, puedes ejecutar:
 
-    ```bash
     docker ps
-    ```
 
 Este comando te dará la clave inicial de acceso para Jenkins.
 
@@ -70,9 +68,7 @@ Una vez dentro de Jenkins, puedes crear y ejecutar un pipeline para construir, p
 
 Para apagar la máquina virtual de Vagrant y detener todos los contenedores de Docker, ejecuta:
 
-    ```bash
     vagrant halt
-    ```
 
 ---
 
