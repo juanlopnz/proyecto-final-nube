@@ -13,8 +13,8 @@ Este proyecto configura un entorno de integración continua utilizando Jenkins e
 1. Clona este repositorio en tu máquina local.
 
     ```bash
-    git clone https://github.com/tu-usuario/tu-repositorio.git
-    cd tu-repositorio
+    git clone https://github.com/juanlopnz/proyecto-final-nube.git
+    cd proyecto-final-nube
     ```
 
 2. Inicia la máquina virtual de Vagrant.
