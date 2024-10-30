@@ -35,9 +35,8 @@ Este proyecto configura un entorno de integración continua utilizando Jenkins e
 
 Una vez que Jenkins esté en ejecución, necesitarás una clave para acceder a la interfaz de administración. Para obtener esta clave, ejecuta el siguiente comando en la terminal de la máquina virtual:
 
-    ```bash
+    
     docker exec -it <nombre_del_contenedor_jenkins> cat /var/jenkins_home/secrets/initialAdminPassword
-    ```
 
 Reemplaza `<nombre_del_contenedor_jenkins>` con el nombre de tu contenedor de Jenkins. Para obtener el nombre exacto del contenedor, puedes ejecutar:
 
