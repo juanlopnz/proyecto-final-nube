@@ -28,7 +28,7 @@ Este proyecto configura un entorno de integración continua utilizando Jenkins e
 3. Conéctate a la máquina virtual para ejecutar los comandos de Docker:
 
     ```bash
-    vagrant ssh
+    vagrant ssh server
     ```
 
 ## Obtener la Clave de Acceso para Jenkins
@@ -36,9 +36,9 @@ Este proyecto configura un entorno de integración continua utilizando Jenkins e
 Una vez que Jenkins esté en ejecución, necesitarás una clave para acceder a la interfaz de administración. Para obtener esta clave, ejecuta el siguiente comando en la terminal de la máquina virtual:
 
     
-    docker exec -it <nombre_del_contenedor_jenkins> cat /var/jenkins_home/secrets/initialAdminPassword
+    docker exec -it <id_del_contenedor_jenkins> cat /var/jenkins_home/secrets/initialAdminPassword
 
-Reemplaza `<nombre_del_contenedor_jenkins>` con el nombre de tu contenedor de Jenkins. Para obtener el nombre exacto del contenedor, puedes ejecutar:
+Reemplaza `<id_del_contenedor_jenkins>` con el nombre de tu contenedor de Jenkins. Para obtener el id exacto del contenedor, puedes ejecutar:
 
     docker ps
 
@@ -49,7 +49,7 @@ Este comando te dará la clave inicial de acceso para Jenkins.
 1. Abre tu navegador y navega a la siguiente dirección:
 
     ```
-    http://192.168.100.3/:8080
+    http://192.168.100.3:8080
     ```
 
    Asegúrate de que el puerto 8080 esté accesible en tu configuración de Vagrant.
@@ -59,6 +59,8 @@ Este comando te dará la clave inicial de acceso para Jenkins.
 3. Sigue las instrucciones en pantalla para completar la configuración inicial de Jenkins.
 
 4. Puedes crear un nuevo usuario administrador o continuar con la cuenta inicial para explorar la interfaz de Jenkins y empezar a configurar tus pipelines.
+
+![Instalacionde plugins](images/install-plugins.png)
 
 ## Desplegar y Ejecutar el Pipeline
 

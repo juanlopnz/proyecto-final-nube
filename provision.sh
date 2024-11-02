@@ -12,6 +12,3 @@ sudo usermod -aG docker vagrant
 
 # Instalar Docker Compose
 sudo apt-get install -y docker-compose
-
-# Instalar Git para clonar el repositorio
-sudo apt-get install -y git

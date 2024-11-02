@@ -19,25 +19,22 @@ pipeline {
         stage('Run Unit Tests') {
             steps {
                 // Ejecutar tests unitarios
-                sh 'npm test'
+                sh script: 'npm test', returnStatus: true
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                // Construir la imagen Docker y etiquetarla como 'latest'
-                script {
-                    docker.build("backend")
-                }
+                sh 'docker build -t backend .'
             }
         }
         
         stage('Deploy') {
             steps {
-                // Ejecutar docker-compose para el despliegue
                 sh '''
-                docker-compose down
-                docker-compose up -d --build
+                docker rm -f minio || true
+                docker compose down
+                docker compose up -d --build
                 '''
             }
         }
