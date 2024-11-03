@@ -56,15 +56,39 @@ Este comando te dará la clave inicial de acceso para Jenkins.
 
 2. Introduce la clave de acceso que obtuviste en el paso anterior.
 
-3. Sigue las instrucciones en pantalla para completar la configuración inicial de Jenkins.
+3. Debes instalar los plugins por defecto, como se muestra en la siguiente imagen.
 
-4. Puedes crear un nuevo usuario administrador o continuar con la cuenta inicial para explorar la interfaz de Jenkins y empezar a configurar tus pipelines.
+![Instalación de plugins](install-plugins.png)
 
-![Instalacionde plugins](images/install-plugins.png)
+4. Puedes crear un nuevo usuario administrador o continuar con la cuenta inicial para explorar la interfaz de Jenkins y empezar a configurar tus pipelines, en este caso, se selecciona la opción de "Skip and continue as admin".
+
+![Creación de usuario](create-user.png)
+
+5. Por último, continúa con el paso hasta que tengas acceso a la interfaz de Jenkins.
 
 ## Desplegar y Ejecutar el Pipeline
 
 Una vez dentro de Jenkins, puedes crear y ejecutar un pipeline para construir, probar y desplegar tu aplicación en el entorno Docker.
+
+### Crear Trabajo
+![Crear trabajo](create-job.png)
+**Descripción**: Esta imagen muestra la página de creación de un nuevo trabajo en Jenkins. Aquí, debes definir el nombre del trabajo y seleccionar la opción de "Pipeline" como tipo de proyecto.
+
+### Seleccionar Pipeline
+![Seleccionar pipeline](select-pipeline.png)
+**Descripción**: En esta imagen se visualiza la configuración del pipeline, donde puedes definir los pasos que Jenkins seguirá. Esta sección incluye opciones para usar Jenkinsfile o definir directamente los scripts de pipeline.
+
+### Agregar Jenkinsfile
+![Agregar Jenkinsfile](add-jenkinsfile.png)
+**Descripción**: Esta captura muestra la sección donde se vincula un `Jenkinsfile` desde el repositorio del proyecto. Este archivo contiene las instrucciones y etapas del pipeline, desde la construcción hasta el despliegue.
+
+### Iniciar Proceso
+![Iniciar proceso](start-process.png)
+**Descripción**: La imagen refleja el momento en que se inicia la ejecución del pipeline. Jenkins muestra el estado actual y el progreso de cada etapa definida en el `Jenkinsfile`.
+
+### Ver Consola
+![Ver consola](view-console.png)
+**Descripción**: Esta captura enseña la salida de la consola de Jenkins durante la ejecución del pipeline. Aquí, los usuarios pueden revisar logs, identificar errores y confirmar que los pasos se completan correctamente.
 
 ## Detener el Entorno
 
