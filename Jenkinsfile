@@ -33,7 +33,8 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f minio || true
-                docker compose down
+                docker rm -f backend || true
+                docker compose down --remove-orphans
                 docker compose up -d --build
                 '''
             }

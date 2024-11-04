@@ -72,19 +72,19 @@ Una vez dentro de Jenkins, puedes crear y ejecutar un pipeline para construir, p
 
 ### Crear Trabajo
 ![Crear trabajo](images/create-job.png)
-**Descripción**: Esta imagen muestra la página de creación de un nuevo trabajo en Jenkins. Aquí, debes definir el nombre del trabajo y seleccionar la opción de "Pipeline" como tipo de proyecto.
+**Descripción:** Este es el panel de control de Jenkins, la página principal. Desde aquí, seleccionaremos la opción "Create a job" para comenzar a configurar un nuevo pipeline.
 
 ### Seleccionar Pipeline
 ![Seleccionar pipeline](images/select-pipeline.png)
-**Descripción**: En esta imagen se visualiza la configuración del pipeline, donde puedes definir los pasos que Jenkins seguirá. Esta sección incluye opciones para usar Jenkinsfile o definir directamente los scripts de pipeline.
+**Descripción**: Esta imagen muestra la página de creación de un nuevo trabajo en Jenkins. Aquí, debes definir el nombre del trabajo y seleccionar la opción de "Pipeline" como tipo de proyecto.
 
 ### Agregar Jenkinsfile
 ![Agregar Jenkinsfile](images/add-jenkinsfile.png)
-**Descripción**: Esta captura muestra la sección donde se vincula un `Jenkinsfile` desde el repositorio del proyecto. Este archivo contiene las instrucciones y etapas del pipeline, desde la construcción hasta el despliegue.
+**Descripción**: En esta imagen se visualiza la configuración del pipeline, donde puedes definir los pasos que Jenkins seguirá. Esta sección incluye opciones para usar Jenkinsfile o definir directamente los scripts de pipeline, Aqui pegaremos el script del `Jenkinsfile` presente en este repositorio del proyecto. Este archivo contiene las instrucciones y etapas del pipeline, desde la construcción hasta el despliegue.
 
 ### Iniciar Proceso
 ![Iniciar proceso](images/start-process.png)
-**Descripción**: La imagen refleja el momento en que se inicia la ejecución del pipeline. Jenkins muestra el estado actual y el progreso de cada etapa definida en el `Jenkinsfile`.
+**Descripción**: La imagen refleja el momento en que se inicia la ejecución del pipeline, en la opción de "Contruir ahora". Jenkins muestra el estado actual y el progreso de cada etapa definida en el `Jenkinsfile`.
 
 ### Ver Consola
 ![Ver consola](images/view-console.png)
