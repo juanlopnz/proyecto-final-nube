@@ -12,14 +12,14 @@ services:
     environment:
       JENKINS_OPTS: --httpPort=8080
 
-  app:
-    image: node:14
-    working_dir: /usr/src/app
-    volumes:
-      - ./app:/usr/src/app
-    command: ["npm", "start"]
-    ports:
-      - "3000:3000"
+  # app:
+  #   image: node:14
+  #   working_dir: /usr/src/app
+  #   volumes:
+  #     - ./app:/usr/src/app
+  #   command: ["npm", "start"]
+  #   ports:
+  #     - "3000:3000"
 
 volumes:
   jenkins_home:

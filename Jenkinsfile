@@ -4,22 +4,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Clonar el repositorio
                 git branch: 'main', url: 'https://github.com/Jesus-0sorio/layered-architecture-node.git'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                // Instalar dependencias
                 sh 'npm install'
             }
         }
 
-        stage('Run Unit Tests') {
+        stage('Run Unit Tests with Coverage') {
             steps {
-                // Ejecutar tests unitarios
-                sh script: 'npm test', returnStatus: true
+                // Ejecutar tests y generar el reporte de cobertura
+                sh script: 'npm run coverage', returnStatus: true
             }
         }
 
@@ -28,7 +26,7 @@ pipeline {
                 sh 'docker build -t backend .'
             }
         }
-        
+
         stage('Deploy') {
             steps {
                 sh '''
@@ -42,12 +40,21 @@ pipeline {
     }
 
     post {
+        always {
+            // Publica el reporte de cobertura usando Cobertura
+            recordCoverage(
+                tools: [[parser: 'COBERTURA', pattern: 'coverage/cobertura-coverage.xml']],
+                sourceCodeRetention: 'EVERY_BUILD',
+                qualityGates: [
+                    [threshold: 80.0, metric: 'LINE', baseline: 'PROJECT'],
+                    [threshold: 65.0, metric: 'BRANCH', baseline: 'PROJECT']
+                ]
+            )
+        }
         success {
-            // Notificación de éxito
             echo 'Build and tests passed!'
         }
         failure {
-            // Notificación de fallos
             echo 'Build failed'
         }
     }
