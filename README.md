@@ -83,7 +83,7 @@ Una vez dentro de Jenkins, puedes crear y ejecutar un pipeline para construir, p
 **Descripción:** En la opción de plugins, puedes gestionar los plugins que serán utilizados en la administración de Jenkins, así como en los procesos de despliegue o personalización de la plataforma.
 
 ## Plugin Coverage
-![Agregar plugin](images/install-plugins.png)
+![Agregar plugin](images/install-plugin.png)
 **Descripción:** Aquí instalaremos el plugin "Coverage", el cual nos permite visualizar los resultados de nuestras pruebas con gráficos, facilitando la identificación de áreas de mejora. Una vez finalizada la instalación, regresaremos a la página principal.
 
 ## Crear Trabajo
