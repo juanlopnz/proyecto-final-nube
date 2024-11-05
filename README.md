@@ -90,6 +90,31 @@ Una vez dentro de Jenkins, puedes crear y ejecutar un pipeline para construir, p
 ![Ver consola](images/view-console.png)
 **Descripción**: Esta captura enseña la salida de la consola de Jenkins durante la ejecución del pipeline. Aquí, los usuarios pueden revisar logs, identificar errores y confirmar que los pasos se completan correctamente.
 
+## Probar la Aplicación
+
+1. Accede al contenedor con la imagen de Jenkins desde la terminal de la máquina virtual:
+
+    ```bash
+    docker exec -it vagrant_data_jenkins_1 /bin/bash
+    ```
+
+2. Verifica que los contenedores creados estén en ejecución:
+
+    ```bash
+    docker ps
+    ```
+
+3. Prueba la aplicación en Postman utilizando el endpoint `192.168.100.3:3001` de la siguiente manera:
+
+   - **Método POST:**
+
+     ![método post](images/test-post.png)
+
+   - **Método GET:**
+
+     ![método get](images/test-get.png)
+
+
 ## Detener el Entorno
 
 Para apagar la máquina virtual de Vagrant y detener todos los contenedores de Docker, ejecuta:
