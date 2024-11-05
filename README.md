@@ -70,25 +70,41 @@ Este comando te dará la clave inicial de acceso para Jenkins.
 
 Una vez dentro de Jenkins, puedes crear y ejecutar un pipeline para construir, probar y desplegar tu aplicación en el entorno Docker.
 
-### Crear Trabajo
+## Crear Trabajo
 ![Crear trabajo](images/create-job.png)
-**Descripción:** Este es el panel de control de Jenkins, la página principal. Desde aquí, seleccionaremos la opción "Create a job" para comenzar a configurar un nuevo pipeline.
+**Descripción:** Esta es la página principal de Jenkins, también conocida como el panel de control.
 
-### Seleccionar Pipeline
+## Adicionar Configuraciones
+![Agregar configuraciones](images/open-settings.png)
+**Descripción:** Selecciona la opción "Administrar Jenkins". En esta sección, puedes agregar los plugins necesarios para los procesos de automatización, además de realizar otras configuraciones.
+
+## Agregar Plugins
+![Adicionar plugins](images/adicionar-plugin.png)
+**Descripción:** En la opción de plugins, puedes gestionar los plugins que serán utilizados en la administración de Jenkins, así como en los procesos de despliegue o personalización de la plataforma.
+
+## Plugin Coverage
+![Agregar plugin](images/install-plugins.png)
+**Descripción:** Aquí instalaremos el plugin "Coverage", el cual nos permite visualizar los resultados de nuestras pruebas con gráficos, facilitando la identificación de áreas de mejora. Una vez finalizada la instalación, regresaremos a la página principal.
+
+## Crear Trabajo
+![Crear trabajo](images/create-job.png)
+**Descripción:** Selecciona la opción "Create a job" para comenzar a configurar un nuevo pipeline.
+
+## Seleccionar Pipeline
 ![Seleccionar pipeline](images/select-pipeline.png)
-**Descripción**: Esta imagen muestra la página de creación de un nuevo trabajo en Jenkins. Aquí, debes definir el nombre del trabajo y seleccionar la opción de "Pipeline" como tipo de proyecto.
+**Descripción:** Esta imagen muestra la página de creación de un nuevo trabajo en Jenkins. Aquí, define el nombre del trabajo y selecciona la opción "Pipeline" como tipo de proyecto.
 
-### Agregar Jenkinsfile
+## Agregar Jenkinsfile
 ![Agregar Jenkinsfile](images/add-jenkinsfile.png)
-**Descripción**: En esta imagen se visualiza la configuración del pipeline, donde puedes definir los pasos que Jenkins seguirá. Esta sección incluye opciones para usar Jenkinsfile o definir directamente los scripts de pipeline, Aqui pegaremos el script del `Jenkinsfile` presente en este repositorio del proyecto. Este archivo contiene las instrucciones y etapas del pipeline, desde la construcción hasta el despliegue.
+**Descripción:** Esta sección muestra la configuración del pipeline, donde puedes definir los pasos que Jenkins seguirá. Aquí, pegaremos el script del `Jenkinsfile` presente en el repositorio del proyecto. Este archivo contiene las instrucciones y etapas del pipeline, desde la construcción hasta el despliegue.
 
-### Iniciar Proceso
+## Iniciar Proceso
 ![Iniciar proceso](images/start-process.png)
-**Descripción**: La imagen refleja el momento en que se inicia la ejecución del pipeline, en la opción de "Contruir ahora". Jenkins muestra el estado actual y el progreso de cada etapa definida en el `Jenkinsfile`.
+**Descripción:** La imagen refleja el momento en que se inicia la ejecución del pipeline, seleccionando la opción "Construir ahora". Jenkins muestra el estado actual y el progreso de cada etapa definida en el `Jenkinsfile`.
 
-### Ver Consola
+## Ver Consola
 ![Ver consola](images/view-console.png)
-**Descripción**: Esta captura enseña la salida de la consola de Jenkins durante la ejecución del pipeline. Aquí, los usuarios pueden revisar logs, identificar errores y confirmar que los pasos se completan correctamente.
+**Descripción:** Esta captura muestra la salida de la consola de Jenkins durante la ejecución del pipeline. Aquí, los usuarios pueden revisar los logs, identificar errores y confirmar que cada paso se completa correctamente.
 
 ## Probar la Aplicación
 
