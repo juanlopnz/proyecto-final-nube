@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   jenkins:
-    build: .  # Cambia de `image: jenkins/jenkins:lts` a `build: .`
+    build: . 
     ports:
       - "8080:8080"
       - "50000:50000"
@@ -11,15 +11,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       JENKINS_OPTS: --httpPort=8080
-
-  # app:
-  #   image: node:14
-  #   working_dir: /usr/src/app
-  #   volumes:
-  #     - ./app:/usr/src/app
-  #   command: ["npm", "start"]
-  #   ports:
-  #     - "3000:3000"
 
 volumes:
   jenkins_home:

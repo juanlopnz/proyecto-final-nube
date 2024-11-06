@@ -3,6 +3,7 @@ pipeline {
 
     stages {
         stage('Checkout') {
+            //Clonar repositorio de GitHub
             steps {
                 git branch: 'main', url: 'https://github.com/Jesus-0sorio/layered-architecture-node.git'
             }
@@ -22,12 +23,14 @@ pipeline {
         }
 
         stage('Build Docker Image') {
+            // Construir imagen de Docker
             steps {
                 sh 'docker build -t backend .'
             }
         }
 
         stage('Deploy') {
+            // Desplegar contenedores de Docker
             steps {
                 sh '''
                 docker rm -f minio || true
